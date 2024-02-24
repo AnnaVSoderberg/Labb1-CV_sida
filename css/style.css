@@ -1,0 +1,281 @@
+/* Återställ standardmarginaler och fyllningsvärden */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Grundläggande stilar för hela sidan */
+body, html {
+    height: 100%;
+    font-family: Merriweather, sans-serif;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAACJJREFUGFdjZEACIo6ZzxhhfBDnzf7pUmABGAfEZkTmgAQAhSQNqfmmcCIAAAAASUVORK5CYII=);
+}
+
+body {
+    min-height: 100%;
+}
+
+/* Stilar för navigationsmenyn */
+nav {
+    background-color: rgb(20, 66, 105);
+    overflow: hidden;
+}
+
+nav a {
+    float: left;
+    display: block;
+    padding: 20px 10px;
+    color: rgb(218, 218, 218);
+    text-align: center;
+}
+
+nav a:hover {
+    color: rgb(165, 165, 165);
+}
+
+/* Stilar för huvudsektionen */
+section {
+    max-width: 700px;
+    min-height: 600px;
+    margin: 20px auto;
+    padding: 40px;
+    background-color: lightgray;
+    border-radius: 40px;
+    box-shadow: 10px 10px 5px 12px grey;
+}
+
+/* Stilar för innehåll */
+.content {
+    padding: 40px;
+    text-align: left;
+}
+
+/* Stilar för behållaren */
+.container {
+    display: flex;
+    padding: 20px;
+}
+
+/* Stilar för kolumner i behållaren */
+.container .column {
+    margin: 10px;
+    display: flex;
+    border: 1px solid rgb(165, 165, 165);
+    padding: 50px;
+}
+
+.skills h2{
+    padding: 30px;
+    font-weight: bold;
+}
+/* Stilar för listelement i färdighetssektionen */
+.skills h2 ul li {
+    padding: 10px;
+    font-size: 70%;
+}
+
+/* Stilar för portfoliobilder */
+
+.picturePortfolio {
+    position: relative;
+    border: 1px solid rgb(49, 49, 49);
+    border-radius: 40px;
+    padding: 5px;
+    width: 400px;
+}
+
+.startpicture, .imgmig {
+        border: 1px solid rgb(49, 49, 49);
+        border-radius: 40px;
+        padding: 5px;
+        width: 50%;
+        height: 30%;
+}
+
+#firstsection{
+    background-image: url("/Bilder/programmering.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: rgb(15, 43, 68);
+    text-align: center;
+    filter:grayscale(10%);
+    -webkit-filter:grayscale(10%);
+}
+
+
+/* Stilar för portfoliolänkar */
+.portfoliocontainer a {
+    margin-top: 20px;
+}
+
+/* Stilar för aktiv sida */
+.active-page {
+    background-color: rgb(13, 46, 75);
+    font-weight: bold;
+}
+
+/* Stilar för bild och text i mig-sektionen */
+.containermig {
+    display: flex;
+    align-items: flex-start;
+}
+
+.imgmig {
+    width: 200px;
+    max-width: 100%;
+    margin-right: 20px;
+}
+
+.textmig {
+    flex: 1;
+}
+/* Modal (bakgrund) */
+.modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+/* Visa modal när dess ID matchar :target */
+.modal:target {
+    display: block;
+}
+
+/* Modalinnehåll */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+}
+
+/* Stil för stängknappen */
+.close-button {
+    float: right;
+    font-size: auto;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.containermig p{
+    padding: 0px 10px 10px;
+}
+
+table{
+
+    width: 100%;
+    max-width: 600px;
+    border-spacing: 10px;
+}
+
+th{
+    text-align: left;
+}
+
+table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;  
+}
+
+th, td{
+    padding-left: 10px;
+}
+tr{
+    height: 30px;
+}
+
+tr:nth-child(even){
+    background-color: #bdbaba;
+}
+
+
+
+/* Stilar för sidfoten */
+footer {
+    display: block;
+    background-color: rgb(20, 66, 105);
+    color: rgb(218, 218, 218);
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0%;
+    width: 100%;
+}
+
+footer a img {
+    width: 10%;
+    height: auto;
+}
+
+
+
+
+/*My Mobile version*/
+
+
+
+@media only screen and (max-width: 600px){
+    .containermig {
+        display: flex;
+        flex-direction: column; /* Ändra till kolumnlayout för mobilvisning */
+        align-items: center; /* Centrera innehållet vertikalt */
+    }
+    
+    .imgmig {
+        width: 100%; /* Bilden anpassas till bredden av sin container */
+        max-width: 100%;
+        margin-bottom: 20px; /* Lägg till lite utrymme under bilden */
+    }
+    
+    .textmig {
+        width: 100%; /* Texten anpassas till bredden av sin container */
+        max-width: 100%;
+        text-align: center; /* Centrera texten horisontellt */
+    }
+
+    .portfoliocontainer {
+        text-align: center; /* Centrera innehållet horisontellt */
+    }
+    
+    .picturePortfolio {
+        width: 100%; /* Bilden anpassas till bredden av sin container */
+        max-width: 100%;
+        margin: 20px auto; /* Centrera bilden vertikalt och lägg till lite utrymme runt den */
+        display: block; /* Se till att bilden inte påverkar layouten för andra element */
+        border: 1px solid rgb(49, 49, 49);
+        border-radius: 40px;
+        padding: 5px;
+    }
+    
+    .modal-content {
+        text-align: left; /* Återställ textjustering för modal-innehållet */
+    }
+    
+    /* Stilar för portfoliolänkar */
+    .portfoliocontainer a {
+        display: block; /* Lägg till radbrytning mellan länkarna */
+        margin-top: 20px;
+    }
+    .startpicture {
+        width: 100%;
+        height: 100%;
+    }
+    
+    table{
+        font-size:x-small;
+    }
+}
